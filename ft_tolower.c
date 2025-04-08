@@ -6,17 +6,15 @@
 /*   By: abardhan <abardhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 20:34:37 by abardhan          #+#    #+#             */
-/*   Updated: 2025/01/02 18:55:15 by abardhan         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:32:43 by abardhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if(c >= 65 && c >= 90)
-	{
-		return(c + 32);
-	}
-	return(c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

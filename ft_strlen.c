@@ -6,18 +6,18 @@
 /*   By: abardhan <abardhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:32:55 by abardhan          #+#    #+#             */
-/*   Updated: 2025/01/02 15:16:47 by abardhan         ###   ########.fr       */
+/*   Updated: 2025/01/27 01:34:28 by abardhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t l;
+	size_t	l;
 
-	l=0;
-	while(s[l])
+	l = 0;
+	while (s[l])
 		l++;
-	return(l);	
+	return (l);
 }

@@ -6,15 +6,15 @@
 /*   By: abardhan <abardhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 14:18:38 by abardhan          #+#    #+#             */
-/*   Updated: 2024/12/24 14:47:34 by abardhan         ###   ########.fr       */
+/*   Updated: 2025/01/24 23:28:07 by abardhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int i)
+int	ft_isprint(int i)
 {
-	if((i >= 9 && i <= 11) || (i >= 32 && i <= 126))
+	if (i >= 32 && i <= 126)
 		return (1);
 	return (0);
 }

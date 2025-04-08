@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abardhan <abardhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 16:52:23 by abardhan          #+#    #+#             */
-/*   Updated: 2025/01/25 18:53:01 by abardhan         ###   ########.fr       */
+/*   Created: 2025/01/26 13:24:17 by abardhan          #+#    #+#             */
+/*   Updated: 2025/01/26 16:04:41 by abardhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int i)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (i >= '0' && i <= '9')
-		return (1);
-	return (0);
+	unsigned int	i;
+	char			*str;
+
+	if (!s || !f)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
